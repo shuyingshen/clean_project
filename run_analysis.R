@@ -13,12 +13,12 @@
   features = read.table("./features.txt")
   labels = read.table("./activity_labels.txt")
   
-## Appropriately labels the data set with descriptive variable names. 
+## Merges the training and the test sets to create one data set. 
   feature_all = rbind(X_train, X_test)
   activity_all = rbind(Y_train, Y_test)
   subject_all = rbind(sub_train, sub_test)
   
-## Get variable names
+## Appropriately labels the data set with descriptive variable names. 
   names(feature_all) = features[,2]
   names(subject_all) = "subject"
   
